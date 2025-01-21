@@ -22,7 +22,7 @@ pub fn compress(raw_blob: &str, quality: u8) -> String {
     let mut buffer = Vec::new();
     compressed_image
         .write_to(&mut buffer, image::ImageOutputFormat::Png)
-        .expect("Could not conver to a buffer");
+        .expect("Could not convert to a buffer");
     let base64_encoded = base64::encode(&buffer);
     let data_url = format!("{BASE_64_PREFIX}{}", base64_encoded);
     log(&"Compression complete.".to_string().into());

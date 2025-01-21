@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 target
 .bin
+pkg/*
+!pkg/.gitkeep
